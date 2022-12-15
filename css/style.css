@@ -7,19 +7,21 @@ body {
 }
 .container {
     display: flex;
+    flex-direction:column;
     width: 100%;
-    background-color: black;
-    justify-content: center;
+    height:auto;
 }
 
 .menu{
     display: flex;
     justify-content:center;
     width:100%;
+    background-color: black;
     background-image: url("../css/img/ergenekon.jpg");
     background-repeat:no-repeat;
-    background-size: cover;
-    position: fixed;
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center;
     height: 700px;
 }
 .header{
@@ -40,7 +42,9 @@ body {
     width:303px;
     font-size:40px;
     font-weight: bold;
-    text-shadow: 2px 2px 5px white;
+    /* text-shadow: 2px 2px 5px white; */
+    font-family: 'Zen Dots', cursive;
+    color: white;
 }
 ul{
     display: flex;
@@ -59,4 +63,11 @@ li{
 }
 li:hover{
     color: #c0c2c3;
+}
+.main{
+
+    display:flex;
+    justify-content:center;
+    margin-top: 30px;
+    height:500px;
 }
