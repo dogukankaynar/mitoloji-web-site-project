@@ -10,6 +10,20 @@ body {
     flex-direction:column;
     width: 100%;
     height:auto;
+    align-items: center;
+}
+.header{
+    overflow: hidden;
+    width: 1511px;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    position: fixed;
+    gap: 350px;
+    height:60px;
+    background-color:rgba(0, 0, 0, 0.2);
+    border-radius:14px;
 }
 
 .menu{
@@ -23,18 +37,6 @@ body {
     background-size: auto;
     background-position: center;
     height: 700px;
-}
-.header{
-    width: 1511px;
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    align-items: center;
-    position: fixed;
-    gap: 350px;
-    height:60px;
-    background-color:rgba(0, 0, 0, 0.2);
-    border-radius:14px;
 }
 
 
@@ -65,9 +67,67 @@ li:hover{
     color: #c0c2c3;
 }
 .main{
-
+    width: 1000%;
     display:flex;
+    flex-direction: row;
     justify-content:center;
-    margin-top: 30px;
+    height:auto;
+    background-color: #081010; 
+}
+.box{
+    width: 850px;
+    height:auto;
+    display:flex;
+    justify-content:space-around;
+    flex-flow: wrap;
+    gap: 30px;
+    margin-top:23px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    width: 400px;
+    height: 500px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    width:400px;
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+img{
+    width: 400px;
     height:500px;
 }
