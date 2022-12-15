@@ -8,31 +8,55 @@ body {
 .container {
     display: flex;
     width: 100%;
-    background-color: blue;
+    background-color: black;
     justify-content: center;
 }
 
 .menu{
-    width: 1490px;
+    display: flex;
+    justify-content:center;
+    width:100%;
     background-image: url("../css/img/ergenekon.jpg");
     background-repeat:no-repeat;
-    position:relative;
-    height: 1000px;
+    background-size: cover;
+    position: fixed;
+    height: 700px;
 }
 .header{
-    width: 1290px;
+    width: 1511px;
     display:flex;
     flex-direction:row;
     justify-content:center;
-    gap: 161px;
+    align-items: center;
+    position: fixed;
+    gap: 350px;
+    height:60px;
+    background-color:rgba(0, 0, 0, 0.2);
+    border-radius:14px;
 }
+
+
 .logo{
+    width:303px;
     font-size:40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
 }
 ul{
     display: flex;
     flex-direction:row;
     gap: 40px;
     list-style: none;
-    font-size: 20px;
+    font-size: 24px;
+    color:#34F3F3;
+    align-items:center;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+}
+li{
+    padding:14px;
+    border-radius: 15px;
+}
+li:hover{
+    color: #c0c2c3;
 }
