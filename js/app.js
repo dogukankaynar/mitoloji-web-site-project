@@ -1,11 +1,9 @@
-let cardTitle = document.getElementsByClassName('card-title');
-let cardDescription = document.getElementsByClassName('card-description');
-let cardImg = document.getElementsByClassName('card-img');
 let box = document.getElementById('box')
 const getCard = new GetCard();
 console.log(getCard);
 function showCard(){
-    for(let i = 0;i< getCard.card.length;i++){
+let i=0;
+    while( i< getCard.card.length){
         box.innerHTML += `
         <div class="flip-card">
         <div class="flip-card-inner">
@@ -18,6 +16,7 @@ function showCard(){
           </div>
         </div>
         </div>`
+        i++;
     }
 }
 showCard();
