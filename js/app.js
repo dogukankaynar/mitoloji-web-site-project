@@ -28,3 +28,7 @@ function showCard() {
 }
 showCard();
 showContent();
+function test() {
+  console.log("çalistim");
+}
+addEventListener("DOMContentLoaded",test)
