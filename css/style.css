@@ -177,6 +177,11 @@ a{
 .footer-logo{
     display:flex;
     align-items:center;
+    width:250px;
+    gap: 10px;
+}
+.footer-logo-img{
+    width:50px;
 }
 .footer-menu{
     display: flex;
