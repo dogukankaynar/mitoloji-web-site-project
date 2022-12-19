@@ -48,16 +48,6 @@ body {
     background-position: center;
     height: 700px;
 }
-
-
-/* .logo{
-    width:303px;
-    font-size:40px;
-    font-weight: bold; 
-    font-family: 'Zen Dots', cursive;
-    color: white;
-} */
-
 ul{
     display: flex;
     flex-direction:row;
@@ -104,7 +94,6 @@ li:hover{
     justify-content:center;
     height:auto;
     background-color: #081010; 
-    /* background-image:url("../css/img/desen.png") */
 }
 .box{
     width: 850px;
@@ -116,50 +105,56 @@ li:hover{
     margin-top:20px;
 }
 .flip-card {
-    background-color: transparent;
     width: 400px;
     height: 500px;
-    /* border: 1px solid #f1f1f1; */
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+    perspective: 1000px;
+    border-radius: 10px;
+
+
   }
   
-  /* This container is needed to position the front and back side */
+
   .flip-card-inner {
     width: 400px;
     height: 500px;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    border-radius: 10px;
+
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    
   }
-  
-  /* Position the front and back side */
+
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 400px;
     height: 500px;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     width:400px;
-    background-color: #bbb;
-    color: black;
+    border-radius: 10px;
+
   }
   
-  /* Style the back side */
+
   .flip-card-back {
     background-color: black;
     color: white;
     transform: rotateY(180deg);
+    border-radius: 10px;
+    
   }
 .card-img{
     width: 400px;
     height:500px;
+    border-radius: 10px;
 }
