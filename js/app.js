@@ -68,6 +68,7 @@ function allshowBigCard() {
   let x = 0;
   box.innerHTML = "";
   content.innerHTML = "";
+  content2.innerHTML="";
   content.style.height = "0px";
   while (x < getCard.card.length) {
     content2.innerHTML += `
