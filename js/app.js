@@ -34,9 +34,6 @@ function showBigCard(e) {
                 <h1 class="card-2-title">${getCard.card[j].title}</h1>
                 <p class="card-2-p">${getCard.card[j].description}</p>
               </div>
-              <div class="card-btn-div">
-                <button id="back-btn" class="card-btn"></button>
-              </div>
             </div>
           </div>
       `;
@@ -82,8 +79,6 @@ function allshowBigCard() {
             <div class="card-description">
               <h1 class="card-2-title">${getCard.card[x].title}</h1>
               <p class="card-2-p">${getCard.card[x].description}</p>
-            </div>
-            <div class="card-btn-div">
             </div>
           </div>
         </div>

@@ -52,7 +52,7 @@ body {
 ul{
     display: flex;
     flex-direction:row;
-    gap: 40px;
+    gap: 10px;
     list-style: none;
     font-size: 24px;
     color:white;
