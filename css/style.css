@@ -198,7 +198,9 @@ a{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #081010;
+    flex-direction: column;
 }
 .card-2{
     background-color: black;
