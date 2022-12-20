@@ -7,11 +7,12 @@ const getCard = new GetCard();
 
 /*mainde türk mitolojisi hakkında bilgi veriyor*/ 
 function showContent(){
+    content.style.height="600px"
     content.innerHTML+=`
     <h1 class="content-title">${getCard.contentText[0].title}</h1>
     <p class="content-description">${getCard.contentText[0].description}</p>
     `
-    console.log(getCard.card);
+    console.log("calistim");
   }
 
   /*Tüm detaylı büyük kartları gösterir */
@@ -20,6 +21,7 @@ function showContent(){
   /*detaylı büyük kart gösteriyor */
  function showBigCard(e){
    let j=0;
+   content.style.height="0px"
     while (j < getCard.card.length) {
     if(e==getCard.card[j].title){
       content2.innerHTML+=`
@@ -43,7 +45,6 @@ function showContent(){
   }
   removeCard(); /*kartı siliyor*/
   document.getElementById("back-btn")
-  console.log(backBtn);
   }
 
   /*kartları gösterir */
@@ -69,7 +70,8 @@ function showContent(){
 function allshowBigCard() {
   let x =0;
   box.innerHTML="";
-  content2.innerHTML="";
+  content.innerHTML="";
+  content.style.height="0px"
   while (x<getCard.card.length) {
     content2.innerHTML+=`
     <div class="card-2">
@@ -92,17 +94,16 @@ function allshowBigCard() {
   console.log("calistim abe");
 }
 function showIndex() {
-  box.innerHTML="";
   content.innerHTML="";
+  showContent();
+  box.innerHTML="";
+  showCard();
   content2.innerHTML="";
-showCard();
-showContent();
 }
 //flip kartları siliyor
 function removeCard() {
   box.innerHTML=""
   content.innerHTML=""
-  content.style.height="0px";
   console.log("clistim");
 }
 //tıklandıgında büyük kart gösterecek
@@ -119,6 +120,6 @@ function addBigCard(e) {
 }
 
 
-showCard();
 showContent();
+showCard();
 // showBigCard();

@@ -204,6 +204,7 @@ a{
     background-color: #081010;
     flex-direction: column;
     margin-bottom: 10px;
+    gap:30px;
 }
 .card-2{
     background-color: black;
