@@ -22,7 +22,7 @@ function showContent(){
             <p>${getCard.card[i].description}</p>
           </div>
         </div>
-        </div>`;
+      </div>`;
     i++;
   }
 }

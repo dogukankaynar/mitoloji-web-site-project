@@ -22,7 +22,7 @@ body {
     position: fixed;
     gap: 350px;
     height:100px;
-    /* background-color:rgba(0, 0, 0, 0.); */
+    background-color:rgba(0, 0, 0, 0.2);
     border-radius:14px;
     z-index:1;
     /* background-image: url("../css/img/logo.png"); */
@@ -107,7 +107,6 @@ li:hover{
 .flip-card {
     width: 400px;
     height: 500px;
-
     perspective: 1000px;
     border-radius: 10px;
 
