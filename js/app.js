@@ -1,6 +1,8 @@
 let box = document.getElementById("box");
 let content = document.getElementById("content");
 let content2 = document.getElementById("content-2");
+let allCardBtn = document.getElementById("all-card")
+let index=document.getElementById("index");
 const getCard = new GetCard();
 
 /*mainde türk mitolojisi hakkında bilgi veriyor*/ 
@@ -11,6 +13,9 @@ function showContent(){
     `
     console.log(getCard.card);
   }
+
+  /*Tüm detaylı büyük kartları gösterir */
+
 
   /*detaylı büyük kart gösteriyor */
  function showBigCard(e){
@@ -61,6 +66,38 @@ function showContent(){
   }
 }
 
+function allshowBigCard() {
+  let x =0;
+  box.innerHTML="";
+  content2.innerHTML="";
+  while (x<getCard.card.length) {
+    content2.innerHTML+=`
+    <div class="card-2">
+          <div class="card-2-img-div" class="card-img">
+          <img id="card-2-img" class="card-img" src="${getCard.card[x].imgUrl}" />
+          </div>
+          <div class="card-menu">
+            <div class="card-description">
+              <h1 class="card-2-title">${getCard.card[x].title}</h1>
+              <p class="card-2-p">${getCard.card[x].description}</p>
+            </div>
+            <div class="card-btn-div">
+              <button id="back-btn" class="card-btn"></button>
+            </div>
+          </div>
+        </div>
+    `
+    x++;
+  }
+  console.log("calistim abe");
+}
+function showIndex() {
+  box.innerHTML="";
+  content.innerHTML="";
+  content2.innerHTML="";
+showCard();
+showContent();
+}
 //flip kartları siliyor
 function removeCard() {
   box.innerHTML=""
@@ -68,12 +105,17 @@ function removeCard() {
   content.style.height="0px";
   console.log("clistim");
 }
+//tıklandıgında büyük kart gösterecek
+box.addEventListener("click", addBigCard);
+//tıklandıgında tüm büyük kartları gösterecek
+allCardBtn.addEventListener("click",allshowBigCard)
+//anasayfayı tekrar açar
+index.addEventListener("click",showIndex)
 
-document.addEventListener("click", addBigCard);
 /*karta tıkladıgında detaylı açıklaması gözükecek*/
 function addBigCard(e) {
   let elementName = e.target.parentElement.parentElement.parentElement.id
-  showBigCard(elementName);
+    showBigCard(elementName);
 }
 
 
