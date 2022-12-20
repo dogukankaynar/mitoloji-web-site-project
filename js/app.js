@@ -1,5 +1,6 @@
 let box = document.getElementById("box");
 let content = document.getElementById("content");
+let concent2 = document.createElement("content-2");
 const getCard = new GetCard();
 console.log(getCard);
 function showContent(){
@@ -7,6 +8,9 @@ function showContent(){
     <h1 class="content-title">${getCard.contentText[0].title}</h1>
     <p class="content-description">${getCard.contentText[0].description}</p>
     `
+  }
+  function showBigCard(){
+    
   }
   function showCard() {
   let i = 0;
@@ -26,5 +30,5 @@ function showContent(){
     i++;
   }
 }
-showCard();
+// showCard();
 showContent();

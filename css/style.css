@@ -194,3 +194,52 @@ a{
     align-items:center;
     gap: 10px;
 }
+.content-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #081010;
+}
+.card-2{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    border:1px solid white;
+    border-radius:15px ;
+}
+.card-2-img{
+    width: 400px;
+    border-radius:15px ;
+
+}
+.card-2-title{
+    color: white;
+}
+.card-2-p{
+    color:white;
+}
+.card-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+    gap: 60px;
+}
+.card-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+.card-btn{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    color: white;
+    margin-left:50px;
+    background-image: url("../css/icons/back-arrow.png");
+    background-size: 70px;
+    background-repeat: no-repeat;
+}
