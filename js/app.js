@@ -106,20 +106,26 @@ function removeCard() {
   content.innerHTML=""
   console.log("clistim");
 }
-//tıklandıgında büyük kart gösterecek
-box.addEventListener("click", addBigCard);
-//tıklandıgında tüm büyük kartları gösterecek
-allCardBtn.addEventListener("click",allshowBigCard)
-//anasayfayı tekrar açar
-index.addEventListener("click",showIndex)
+
+
 
 /*karta tıkladıgında detaylı açıklaması gözükecek*/
 function addBigCard(e) {
   let elementName = e.target.parentElement.parentElement.parentElement.id
     showBigCard(elementName);
 }
+function eventListeners(){
+//tıklandıgında büyük kart gösterecek
+box.addEventListener("click", addBigCard);
+//tıklandıgında tüm büyük kartları gösterecek
+allCardBtn.addEventListener("click",allshowBigCard)
+//anasayfayı tekrar açar
+index.addEventListener("click",showIndex)
+document.addEventListener("DOMContentLoaded",()=>{
+  showContent();
+  showCard();
+})
 
+}
 
-showContent();
-showCard();
-// showBigCard();
+eventListeners();
