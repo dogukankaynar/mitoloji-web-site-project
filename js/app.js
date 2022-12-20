@@ -1,16 +1,9 @@
 let box = document.getElementById("box");
 let content = document.getElementById("content");
 let content2 = document.getElementById("content-2");
-
-document.addEventListener("click", addBigCard);
-
-function addBigCard(e) {
-  let elementName = e.target.parentElement.parentElement.parentElement.id
-  showBigCard(elementName)
-
-}
 const getCard = new GetCard();
-console.log(getCard);
+
+/*mainde türk mitolojisi hakkında bilgi veriyor*/ 
 function showContent(){
     content.innerHTML+=`
     <h1 class="content-title">${getCard.contentText[0].title}</h1>
@@ -18,9 +11,11 @@ function showContent(){
     `
     console.log(getCard.card);
   }
+
+  /*detaylı büyük kart gösteriyor */
  function showBigCard(e){
    let j=0;
-  while (j < getCard.card.length) {
+    while (j < getCard.card.length) {
     if(e==getCard.card[j].title){
       content2.innerHTML+=`
       <div class="card-2">
@@ -33,7 +28,7 @@ function showContent(){
                 <p class="card-2-p">${getCard.card[j].description}</p>
               </div>
               <div class="card-btn-div">
-                <button class="card-btn"></button>
+                <button id="back-btn" class="card-btn"></button>
               </div>
             </div>
           </div>
@@ -41,7 +36,12 @@ function showContent(){
     }
     j++;
   }
+  removeCard(); /*kartı siliyor*/
+  document.getElementById("back-btn")
+  console.log(backBtn);
   }
+
+  /*kartları gösterir */
   function showCard() {
   let i = 0;
   while (i < getCard.card.length) {
@@ -60,6 +60,22 @@ function showContent(){
     i++;
   }
 }
+
+//flip kartları siliyor
+function removeCard() {
+  box.innerHTML=""
+  content.innerHTML=""
+  content.style.height="0px";
+  console.log("clistim");
+}
+
+document.addEventListener("click", addBigCard);
+/*karta tıkladıgında detaylı açıklaması gözükecek*/
+function addBigCard(e) {
+  let elementName = e.target.parentElement.parentElement.parentElement.id
+  showBigCard(elementName);
+}
+
 
 showCard();
 showContent();

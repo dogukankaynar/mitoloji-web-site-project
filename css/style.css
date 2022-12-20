@@ -4,6 +4,8 @@
 }
 body {
     width: 100%;
+    background-color: #081010;
+
 }
 .container {
     display: flex;
@@ -201,6 +203,7 @@ a{
     align-items: center;
     background-color: #081010;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .card-2{
     background-color: black;
@@ -210,14 +213,18 @@ a{
     width: 80%;
     border:1px solid white;
     border-radius:15px ;
+    height:450px;
+    padding: 10px;
 }
-.card-2-img{
+.card-img{
     width: 400px;
-    border-radius:15px ;
+    height:450px;
+    border-radius:17px ;
 
 }
 .card-2-title{
     color: white;
+    height: 100%;
 }
 .card-2-p{
     color:white;
